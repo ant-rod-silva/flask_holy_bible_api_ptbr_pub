@@ -35,13 +35,13 @@ http://127.0.0.1:5000/api/livro/1
 http://127.0.0.1:5000/api/livro/?id=1
 ```
 
-#### retorna todos os verículos do capítulo 2 do livro id = 1 (Gênesis)
+#### retorna todos os versículos do capítulo 2 do livro id = 1 (Gênesis)
 
 ```
 http://127.0.0.1:5000/api/livro/1/2
 ```
 
-#### retorna o verículo 4 do capítulo 3 do livro id = 1 (Gênesis)
+#### retorna o versículo 4 do capítulo 3 do livro id = 1 (Gênesis)
 
 ```
 http://127.0.0.1:5000/api/livro/1/3/4
