@@ -2,15 +2,29 @@
 Uma API para Biblia Sagrada.
 Este é um trabalho em desenvolvimento.
 
-### ver os tipos de testamento
+#### ver os tipos de testamento (devolve: Antigo Testamento e Novo Testamento) e seus respectivos dados
 
 ```
 http://127.0.0.1:5000/api/testamento/
 ```
 
-### ver o tipo de testamento 1 (Antigo Testamento)
+#### ver o tipo de testamento id = 1 (devolve: Antigo Testamento)
 
 ```
 http://127.0.0.1:5000/api/testamento/1
 http://127.0.0.1:5000/api/testamento/?id=1
+```
+
+#### ver os livros cadastrados (devolve: Gênesis, Êxodo, ..., Apocalipse) e seus respectivos dados
+
+```
+http://127.0.0.1:5000/api/livros
+```
+
+#### ver o livros id = 1 (devolve: Gênesis) e seus respectivos dados
+
+```
+http://127.0.0.1:5000/api/livros/1
+http://127.0.0.1:5000/api/livros/?id=1
+
 ```
