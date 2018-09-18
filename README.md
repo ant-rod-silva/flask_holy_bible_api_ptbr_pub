@@ -1,3 +1,3 @@
-# flask_bible_api_ptbr
+# Flask Bible API
 Uma API para Biblia Sagrada.
 Este é um trabalho em desenvolvimento.
