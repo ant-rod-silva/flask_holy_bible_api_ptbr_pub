@@ -3,8 +3,12 @@
 
 # pip install flask
 
+"""
+Non-existent route or resource: HTTP/1.1 404 Not Found
+"""
+
 import flask
-from flask import Flask, request, json, Response
+from flask import Flask, request, json, Response, abort
 from jsonTestamento import tb_testamento
 from jsonLivro import tb_livro
 from jsonGenesis import tb_texto_genesis
@@ -21,6 +25,14 @@ def index():
        Última atualização: 18/09/2018
     '''
 
+
+def get_tb_livro(id):
+    livro_tbl = None
+    if id == 1:
+        livro_tbl = tb_texto_genesis
+    return livro_tbl
+
+
 # http://127.0.0.1:5000/api/testamento/1
 @app.route('/api/testamento/<testamento_id>', methods=['GET'])
 def api_testamento_id(testamento_id):
@@ -28,7 +40,7 @@ def api_testamento_id(testamento_id):
     json_str = ''
     testamento_id = int(testamento_id)
     if testamento_id <= 0:
-        return "id invalido"
+        abort(404)
     for testamento in tb_testamento:
         if testamento['id'] == testamento_id:
             json_str = json.dumps(
@@ -39,8 +51,9 @@ def api_testamento_id(testamento_id):
             )
             response = Response(json_str, content_type="application/json; charset=utf-8" )
     if not response:
-        return "nao encontrado"
+        abort(404)
     return response
+
 
 # http://127.0.0.1:5000/api/testamento/
 # http://127.0.0.1:5000/api/testamento/?id=1
@@ -56,11 +69,13 @@ def api_testamento():
         )
         response = Response(json_str, content_type="application/json; charset=utf-8" )
     else:
-        id = int(request.args['id'])
+        id = str(request.args['id']).replace('/','')
+        id = int(id)
         return api_testamento_id(id)
     if not response:
-        return "nao encontrado"
+        abort(404)
     return response
+
 
 # http://127.0.0.1:5000/api/livros/1
 @app.route('/api/livros/<livro_id>', methods=['GET'])
@@ -69,7 +84,7 @@ def api_livros_id(livro_id):
     json_str = ''
     livro_id = int(livro_id)
     if livro_id <= 0:
-        return "id invalido"
+        abort(404)
     for livro in tb_livro:
         if livro['id'] == livro_id:
             json_str = json.dumps(
@@ -80,12 +95,13 @@ def api_livros_id(livro_id):
             )
             response = Response(json_str, content_type="application/json; charset=utf-8" )
     if not response:
-        return "nao encontrado"
+        abort(404)
     return response
+
 
 # http://127.0.0.1:5000/api/livros/
 # http://127.0.0.1:5000/api/livros/?id=1
-@app.route('/api/livros/', methods=['GET'])
+@app.route('/api/livros', methods=['GET'], strict_slashes=False)
 def api_livros():
     response = None
     if not 'id' in request.args:
@@ -97,20 +113,22 @@ def api_livros():
         )
         response = Response(json_str, content_type="application/json; charset=utf-8" )
     else:
-        id = int(request.args['id'])
+        id = str(request.args['id']).replace('/','')
+        id = int(id)
         return api_livros_id(id)
     if not response:
-        return "nao encontrado"
+        abort(404)
     return response
 
+
 # http://127.0.0.1:5000/api/livro/1
-@app.route('/api/livro/<livro_id>', methods=['GET'])
+@app.route('/api/livro/<int:livro_id>', methods=['GET'], strict_slashes=False)
 def api_livro_id(livro_id):
     response = None
     livro_tbl = None
-    livro_id = int(livro_id)
-    if livro_id == 1:
-        livro_tbl = tb_texto_genesis
+    if livro_id <= 0 or livro_id > 66:
+        abort(404)
+    livro_tbl = get_tb_livro(livro_id)
     json_str = json.dumps(
         livro_tbl,
         ensure_ascii=False,
@@ -120,19 +138,41 @@ def api_livro_id(livro_id):
     response = Response(json_str, content_type="application/json; charset=utf-8" )
     return response
 
+
 # http://127.0.0.1:5000/api/livro/1/1
-@app.route('/api/livro/<livro_id>/<capitulo>', methods=['GET'])
+# http://127.0.0.1:5000/api/livro/1/1/
+@app.route('/api/livro/<int:livro_id>/<int:capitulo>', methods=['GET'], strict_slashes=False)
 def api_livro_id_capitulo(livro_id,capitulo):
     response = None
     livro_tbl = None
-    livro_id = int(livro_id)
-    capitulo = int(capitulo)
     results = []
-    if livro_id == 1:
-        livro_tbl = tb_texto_genesis
+    livro_tbl = get_tb_livro(livro_id)
     for livro in livro_tbl:
         if livro['capitulo'] == capitulo:
             results.append(livro)
+
+    json_str = json.dumps(
+        results,
+        ensure_ascii=False,
+        indent=4,
+        sort_keys=False
+    )
+    response = Response(json_str, content_type="application/json; charset=utf-8" )
+    return response
+
+
+# http://127.0.0.1:5000/api/livro/1/2/3
+# http://127.0.0.1:5000/api/livro/1/2/3/
+@app.route('/api/livro/<int:livro_id>/<int:capitulo>/<int:versiculo>', methods=['GET'], strict_slashes=False)
+def api_livro_id_capitulo_versiculo(livro_id,capitulo,versiculo):
+    response = None
+    livro_tbl = None
+    results = []
+    livro_tbl = get_tb_livro(livro_id)
+    for livro in livro_tbl:
+        if livro['capitulo'] == capitulo:
+            if livro['versiculo'] == versiculo:
+                results.append(livro)
 
     json_str = json.dumps(
         results,
