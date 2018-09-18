@@ -2,14 +2,14 @@
 Uma API para Biblia Sagrada.
 Este é um trabalho em desenvolvimento.
 
-# Pré-requisitos
+#### Pré-requisitos
 - Python 3
 - Pip
 - NodeJS
 - Flask
 
-# Para executar
-- python api.py
+#### Para executar
+- python app.py
 
 #### ver os tipos de testamento (devolve: Antigo Testamento e Novo Testamento) e seus respectivos dados
 
