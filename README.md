@@ -27,7 +27,7 @@ source env/bin/activate
 ##### Install requirements:
 
 ```
-pip install -r 'examples/auth/requirements.txt'
+pip install -r requirements.txt
 ```
 
 ##### Run the application:
