@@ -1,6 +1,6 @@
 # Flask Bible API
-Uma API para Biblia Sagrada.
-Este é um trabalho em desenvolvimento.
+An Sacred Bible API made in Flask
+This is a work-in-progress app.
 
 #### Pré-requisitos
 - Python 3
