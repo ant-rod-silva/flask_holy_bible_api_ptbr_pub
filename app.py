@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 #!flask/bin/python
 
-# pip install flask
-
 """
 Non-existent route or resource: HTTP/1.1 404 Not Found
 """
@@ -19,10 +17,10 @@ app.config["DEBUG"] = True
 @app.route('/')
 def index():
     return '''
-       Flask Bible API v. 0.1<br/>
+       Flask Bible API v. 0.2<br/>
        by Antonio Rodrigo<br/>
        Almeida Corrigida e Fiel<br/>
-       Última atualização: 18/09/2018
+       Última atualização: 18/08/2024
     '''
 
 
