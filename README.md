@@ -12,7 +12,7 @@ This is a work-in-progress app.
 ##### Clone the repository:
 
 ```
-git clone https://github.com/ant-rod-silva/flask_bible_api_ptbr.git
+git clone https://github.com/ant-rod-silva/flask_holy_bible_api_ptbr_pub.git
 cd flask-crud
 ```
 
