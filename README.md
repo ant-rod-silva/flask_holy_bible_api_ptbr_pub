@@ -13,7 +13,7 @@ This is a work-in-progress app.
 
 ```
 git clone https://github.com/ant-rod-silva/flask_holy_bible_api_ptbr_pub.git
-cd flask-crud
+cd flask_holy_bible_api_ptbr_pub/
 ```
 
 ##### Create and activate a virtual environment:
