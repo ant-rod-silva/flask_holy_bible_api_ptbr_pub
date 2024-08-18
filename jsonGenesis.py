@@ -1235,6 +1235,102 @@ tb_texto_genesis = [
      'capitulo': 8,
      'versiculo': 22,
      'texto': 'Enquanto durar a terra, não deixará de haver sementeira e ceifa, frio e calor, verão e inverno, dia e noite.'
+    },
+    {
+     'id_livro': 1,
+     'capitulo': 9,
+     'versiculo': 1,
+     'texto': 'Abençoou Deus a Noé e a seus filhos, e lhes disse: Sede fecundos, multiplicai-vos e enchei a terra.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 2,
+         'texto': 'Terão medo e pavor de vós todos os animais da terra e todas as aves do céu; nas vossas mãos são entregues todos os seres que se movem sobre a terra e todos os peixes do mar.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 3,
+         'texto': 'Tudo o que se move e vive será para vosso alimento, como vos dei a erva verde, tudo vos dou agora.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 4,
+         'texto': 'Carne, porém, com sua vida, isto é, com seu sangue, não comereis.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 5,
+         'texto': 'Certamente requererei o vosso sangue, o sangue da vossa vida; de todo animal o requererei; como também da mão do homem e da mão do irmão de cada um requererei a vida do homem.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 6,
+         'texto': 'Se alguém derramar o sangue do homem, pelo homem se derramará o seu, porque Deus fez o homem segundo a sua imagem.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 7,
+         'texto': 'Mas sede fecundos e multiplicai-vos; povoai a terra e multiplicai-vos nela.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 8,
+         'texto': 'Disse Deus a Noé e a seus filhos:'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 9,
+         'texto': 'Eis que estabeleço a minha aliança convosco e com a vossa descendência,'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 10,
+         'texto': 'e com todos os seres viventes que estão convosco, tanto as aves, os animais domésticos e os animais selváticos, todos os que saíram da arca, como todos os animais da terra.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 11,
+         'texto': 'Estabeleço convosco a minha aliança: não será mais destruída toda carne por águas do dilúvio, e não haverá mais dilúvio para destruir a terra.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 12,
+         'texto': 'Disse Deus: Este é o sinal da minha aliança, que faço entre mim e vós e entre todos os seres viventes que estão convosco, para perpétuas gerações:'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 13,
+         'texto': 'Porei nas nuvens o meu arco; será por sinal da aliança entre mim e a terra.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 14,
+         'texto': 'Quando eu trouxer nuvens sobre a terra, e nelas aparecer o arco,'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 15,
+         'texto': 'então, me lembrarei da minha aliança, firmada entre mim e vós e todos os seres viventes de toda carne; e as águas não mais se tornarão em dilúvio para destruir toda carne.'
+    },
+    {
+         'id_livro': 1,
+         'capitulo': 9,
+         'versiculo': 16,
+         'texto': 'O arco estará nas nuvens; vê-lo-ei e me lembrarei da aliança eterna entre Deus e todos os seres viventes de toda carne que há sobre a terra.'
     }
 ]
 
