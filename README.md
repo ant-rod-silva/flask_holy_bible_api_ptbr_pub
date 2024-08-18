@@ -19,8 +19,8 @@ cd flask_holy_bible_api_ptbr_pub/
 ##### Create and activate a virtual environment:
 
 ```
-virtualenv env
-source env/bin/activate
+virtualenv flask_bible_env
+source flask_bible_env/bin/activate
 ```
 
 ##### Install requirements:
