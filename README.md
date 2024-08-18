@@ -1,5 +1,7 @@
-# Flask Bible API
-A Holy Bible API made in Flask
+# Flask Holy Bible API
+
+A Holy Bible API made in Flask.
+
 This is a work-in-progress app.
 
 #### Pre-requisites
